@@ -34,9 +34,64 @@ import Base from '../layouts/Base.astro';
       ].map((s)=> (
         <div class="card reveal">
           <h3 class="font-semibold">{s.title}</h3>
-          <p class="text-white/70 mt-1">{s.copy}</p>
+          <p class="text-slate-600 dark:text-white/70 mt-1">{s.copy}</p>
         </div>
       ))}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="heading">Why Choose Us</h2>
+    <div class="grid md:grid-cols-3 gap-4 mt-4">
+      {[ 
+        {t:'Certified Expertise', d:'Certified professionals across cloud, networking and security to deliver right the first time.'},
+        {t:'Vendor-Agnostic', d:'We recommend the right tools for your need, not the most expensive ones.'},
+        {t:'Transparent SLAs', d:'Clear communication, measurable outcomes and documented processes.'}
+      ].map((f)=> (
+        <div class="card reveal">
+          <h3 class="font-semibold">{f.t}</h3>
+          <p class="text-slate-600 dark:text-white/70 mt-1">{f.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="heading">Industries We Serve</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+      {[ 'SMB', 'Healthcare', 'Education', 'Hospitality', 'Government', 'Non‑Profit', 'Retail', 'Startups' ].map((i)=> (
+        <div class="card reveal text-center">
+          <h3 class="font-semibold">{i}</h3>
+          <p class="text-slate-600 dark:text-white/70 mt-1">Tailored solutions and compliance‑aware deployments.</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="heading">What Clients Say</h2>
+    <div class="grid md:grid-cols-3 gap-4 mt-4">
+      {[
+        {q:'Fast response and clear SLAs — exactly what we needed for growth.', a:'COO, Fintech Startup'},
+        {q:'Migrated to cloud with zero downtime. Costs are now predictable.', a:'IT Manager, Manufacturing'},
+        {q:'Reliable partner for both procurement and ongoing support.', a:'Founder, D2C Brand'}
+      ].map((t)=> (
+        <blockquote class="card reveal">
+          <p class="italic">“{t.q}”</p>
+          <footer class="mt-2 text-slate-600 dark:text-white/70">— {t.a}</footer>
+        </blockquote>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-14 card reveal text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="heading">Ready to modernize your IT?</h2>
+      <p class="mt-2 text-slate-600 dark:text-white/70">Let’s discuss your roadmap and get you a clear, actionable proposal.</p>
+      <div class="mt-4 flex justify-center gap-3">
+        <a href="/contact" class="btn">Get a Quote</a>
+        <a href="/services" class="btn bg-transparent border border-slate-300 text-slate-800 hover:bg-slate-50 dark:border-white/20 dark:text-white dark:hover:bg-white/10">Explore Services</a>
+      </div>
     </div>
   </section>
 </Base>

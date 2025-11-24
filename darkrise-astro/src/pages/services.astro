@@ -6,12 +6,14 @@ import Base from '../layouts/Base.astro';
     <div class="reveal">
       <p class="text-accent font-semibold tracking-widest uppercase text-xs">Our Expertise</p>
       <h1 class="heading mt-1">Strategic IT Services for Modern Enterprises</h1>
-      <p class="mt-3 text-white/70">We help businesses adopt modern, secure, and scalable IT solutions, combining infrastructure, software and consulting expertise to empower your digital growth.</p>
+      <p class="mt-3 text-slate-600 dark:text-white/70">We help businesses adopt modern, secure, and scalable IT solutions, combining infrastructure, software and consulting expertise to empower your digital growth.</p>
       <a class="btn mt-4" href="/contact">Talk to an expert</a>
     </div>
     <div class="reveal">
-      <div class="card h-72">
-        <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?q=80&w=1200&auto=format&fit=crop" alt="Abstract technology illustration" class="w-full h-full object-cover rounded-lg"/>
+      <div class="card p-0 overflow-hidden">
+        <div class="aspect-video">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?q=80&w=1600&auto=format&fit=crop" alt="Data center and networking" class="w-full h-full object-cover"/>
+        </div>
       </div>
     </div>
   </section>
@@ -29,7 +31,7 @@ import Base from '../layouts/Base.astro';
       ].map(s=> (
         <div class="card reveal hover:translate-y-[-2px] transition">
           <h3 class="font-semibold">{s.t}</h3>
-          <p class="text-white/70 mt-1">{s.d}</p>
+          <p class="text-slate-600 dark:text-white/70 mt-1">{s.d}</p>
         </div>
       ))}
     </div>
@@ -37,6 +39,77 @@ import Base from '../layouts/Base.astro';
 
   <section class="mt-12">
     <h2 class="heading">Support & SLAs</h2>
-    <p class="text-white/70 mt-2">Tiered SLAs: Business Hours, Extended Coverage and 24/7 Critical support with guaranteed response windows. Tailored SLA documents available for procurement processes.</p>
+    <p class="text-slate-600 dark:text-white/70 mt-2">Tiered SLAs: Business Hours, Extended Coverage and 24/7 Critical support with guaranteed response windows. Tailored SLA documents available for procurement processes.</p>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="heading">Detailed Offerings</h2>
+    <div class="grid md:grid-cols-2 gap-4 mt-4">
+      <div class="card reveal">
+        <h3 class="font-semibold">Procurement & Rollout</h3>
+        <ul class="list-disc pl-5 mt-2 text-slate-600 dark:text-white/70 space-y-1">
+          <li>Hardware sourcing (servers, endpoints, networking)</li>
+          <li>OS imaging, asset tagging, and inventory</li>
+          <li>On‑site deployment and user onboarding</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="font-semibold">Cloud & Continuity</h3>
+        <ul class="list-disc pl-5 mt-2 text-slate-600 dark:text-white/70 space-y-1">
+          <li>Migrations and modernization (AWS/Azure/GCP)</li>
+          <li>Backups, DR, immutable storage policies</li>
+          <li>Observability and cost governance</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="font-semibold">Security</h3>
+        <ul class="list-disc pl-5 mt-2 text-slate-600 dark:text-white/70 space-y-1">
+          <li>Endpoint security and MDM</li>
+          <li>Vulnerability scanning and remediation</li>
+          <li>Identity, MFA, conditional access</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <h3 class="font-semibold">Development</h3>
+        <ul class="list-disc pl-5 mt-2 text-slate-600 dark:text-white/70 space-y-1">
+          <li>Web, mobile and API development</li>
+          <li>CI/CD and IaC pipelines</li>
+          <li>Performance and security reviews</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="heading">How We Engage</h2>
+    <div class="grid md:grid-cols-3 gap-4 mt-4">
+      {[ 
+        {t:'Discovery', d:'Requirements, current state, constraints and objectives.'},
+        {t:'Design', d:'Architecture, timelines, responsibilities and SLAs.'},
+        {t:'Delivery', d:'Implementation, handover, documentation and training.'}
+      ].map(s => (
+        <div class="card reveal">
+          <h3 class="font-semibold">{s.t}</h3>
+          <p class="text-slate-600 dark:text-white/70 mt-1">{s.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="heading">FAQ</h2>
+    <div class="grid md:grid-cols-2 gap-4 mt-4">
+      {[
+        {q:'Do you support 24/7?', a:'Yes — with our Critical SLA tier. Standard tiers cover extended and business hours.'},
+        {q:'Can you work with our existing vendors?', a:'Absolutely. We are vendor‑agnostic and integrate with your current stack.'},
+        {q:'Do you offer fixed‑price engagements?', a:'Yes for clearly scoped projects; otherwise time‑and‑materials with transparent reporting.'},
+        {q:'What locations do you cover?', a:'We offer remote support globally and on‑site coverage in key regions.'}
+      ].map((f)=> (
+        <div class="card reveal">
+          <h3 class="font-semibold">{f.q}</h3>
+          <p class="text-slate-600 dark:text-white/70 mt-1">{f.a}</p>
+        </div>
+      ))}
+    </div>
   </section>
 </Base>

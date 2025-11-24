@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="About — Netzwerk">
-  <section class="prose prose-invert max-w-none">
+  <section class="prose prose-slate dark:prose-invert max-w-none">
     <h1>About Netzwerk</h1>
     <p>Driven by service. Defined by trust. Delivering value since 2021.</p>
   </section>
@@ -10,17 +10,41 @@ import Base from '../layouts/Base.astro';
   <section class="grid md:grid-cols-2 gap-6 mt-6">
     <div class="card reveal">
       <h3 class="font-semibold">Our Journey</h3>
-      <p class="text-white/70 mt-1">From a small team to a full‑service IT provider, we focus on client value and reliable execution across procurement, managed services and lifecycle strategies.</p>
+      <p class="text-slate-600 dark:text-white/70 mt-1">From a small team to a full‑service IT provider, we focus on client value and reliable execution across procurement, managed services and lifecycle strategies.</p>
     </div>
     <div class="card reveal">
       <h3 class="font-semibold">Vision & Mission</h3>
-      <p class="text-white/70 mt-1">To be a global leader in IT sales and services while offering cost‑effective, customer‑first solutions.</p>
+      <p class="text-slate-600 dark:text-white/70 mt-1">To be a global leader in IT sales and services while offering cost‑effective, customer‑first solutions.</p>
     </div>
   </section>
 
   <section class="card reveal mt-6">
     <h3 class="font-semibold">Certifications & Platforms</h3>
-    <p class="text-white/70 mt-1">We adhere to enterprise compliance practices and work with Microsoft, Google, AWS, Dell, HP, Lenovo and more — from hardware provisioning to cloud integration.</p>
+    <p class="text-slate-600 dark:text-white/70 mt-1">We adhere to enterprise compliance practices and work with Microsoft, Google, AWS, Dell, HP, Lenovo and more — from hardware provisioning to cloud integration.</p>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="heading">Our Values</h2>
+    <div class="grid md:grid-cols-3 gap-4 mt-3">
+      {[{t:'Customer First',d:'We align to outcomes and measure success through your lens.'},{t:'Reliability',d:'Documented processes, change control, and clear ownership.'},{t:'Growth Mindset',d:'We learn, iterate, and bring modern practices to every engagement.'}].map(v => (
+        <div class="card reveal">
+          <h3 class="font-semibold">{v.t}</h3>
+          <p class="text-slate-600 dark:text-white/70 mt-1">{v.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="heading">Milestones</h2>
+    <div class="grid md:grid-cols-4 gap-4 mt-3">
+      {[{y:'2021',e:'Founded and delivered first 20+ rollouts'},{y:'2022',e:'Expanded Managed Services and security offerings'},{y:'2023',e:'Cloud migrations across industries'},{y:'2024',e:'End‑to‑end procurement to support lifecycle at scale'}].map(m => (
+        <div class="card reveal text-center">
+          <div class="text-2xl font-semibold">{m.y}</div>
+          <p class="text-slate-600 dark:text-white/70 mt-1">{m.e}</p>
+        </div>
+      ))}
+    </div>
   </section>
 
   <section class="mt-8">
@@ -30,9 +54,17 @@ import Base from '../layouts/Base.astro';
         <article class="card reveal">
           <img src={`https://i.pravatar.cc/300?img=${i*8}`} alt="Team member portrait" class="w-full h-40 object-cover rounded-lg" />
           <h4 class="mt-2 font-semibold">Team Member {i}</h4>
-          <p class="text-white/70">Role</p>
+          <p class="text-slate-600 dark:text-white/70">Role</p>
         </article>
       ))}
+    </div>
+  </section>
+
+  <section class="mt-10 card reveal text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="heading">Want to partner with us?</h2>
+      <p class="mt-2 text-slate-600 dark:text-white/70">We’ll help you build a pragmatic roadmap and execute with clarity.</p>
+      <a href="/contact" class="btn mt-4">Contact Us</a>
     </div>
   </section>
 </Base>
