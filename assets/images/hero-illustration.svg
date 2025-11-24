@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="a" x1="0" x2="1">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0b6cd0" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="b" x1="0" x2="1">
+      <stop offset="0%" stop-color="#7dd3fc" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#a)" />
+  <g opacity="0.12" transform="translate(60,40)">
+    <rect x="0" y="0" width="480" height="320" rx="28" fill="url(#b)" />
+    <rect x="380" y="120" width="520" height="420" rx="20" fill="#fff" opacity="0.06"/>
+  </g>
+  <g transform="translate(140,120)">
+    <rect x="0" y="0" width="420" height="260" rx="18" fill="#ffffff" opacity="0.06" />
+    <g transform="translate(20,18)" fill="#fff" opacity="0.95">
+      <rect width="360" height="48" rx="8" />
+      <rect y="74" width="320" height="10" rx="6" />
+      <rect y="98" width="260" height="10" rx="6" />
+      <rect y="138" width="340" height="10" rx="6" />
+    </g>
+    <g transform="translate(520,40)" opacity="0.95">
+      <circle cx="60" cy="60" r="60" fill="#fff" opacity="0.08" />
+      <circle cx="60" cy="60" r="32" fill="#fff" opacity="0.12" />
+    </g>
+  </g>
+  <g transform="translate(700,320)" opacity="0.9">
+    <path d="M0 80 C80 0 160 0 240 80 L240 240 L0 240 Z" fill="#ffffff" opacity="0.06" />
+  </g>
+</svg>

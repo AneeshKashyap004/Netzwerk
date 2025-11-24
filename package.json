@@ -1,0 +1,10 @@
+{
+  "name": "netzwerk-website",
+  "version": "0.1.0",
+  "description": "Static website scaffold for Netzwerk",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "author": "Netzwerk",
+  "license": "MIT"
+}

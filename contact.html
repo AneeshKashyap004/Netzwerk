@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Netzwerk</title>
+  <meta name="description" content="Contact Netzwerk for quotes, partnerships, rental and refurbishment services.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Fonts: Poppins for headings, Inter for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Go to home">
+        <img src="assets/images/Pasted%20image.png" alt="Netzwerk logo">
+      </a>
+      <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">🌙</button>
+        <button id="nav-toggle" aria-label="Toggle navigation" aria-controls="main-nav">☰</button>
+        <a class="btn header-cta" href="contact.html">Get Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-shell">
+  <main id="main">
+    <section class="section container">
+      <h1 class="animate-heading">Contact Us</h1>
+      <span class="heading-underline" aria-hidden="true"></span>
+      <p class="lead">Let's build something great. Reach out for quotes, partnerships or custom work.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal reveal-up">
+          <h3>Office</h3>
+          <div class="contact-cards">
+            <div class="c-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2C8.7 2 6 4.7 6 8c0 5.2 6 12 6 12s6-6.8 6-12c0-3.3-2.7-6-6-6zm0 8.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 5.5 12 5.5s2.5 1.1 2.5 2.5S13.4 10.5 12 10.5z"/></svg>
+              <span>No.265, First Floor, 6th Main, 4th Cross, Mico Layout, BTM 2nd Stage, Bangalore - 560076</span>
+            </div>
+            <div class="c-card"><img src="assets/icons/email.svg" alt="Email"><a href="mailto:contact@netzwerk.systems">contact@netzwerk.systems</a></div>
+            <div class="c-card"><img src="assets/icons/phone.svg" alt="Phone"><a href="tel:+916361827210">+91 63618 27210</a></div>
+            <div class="c-card">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 8a1 1 0 0 1 1 1v3.2l2.4 1.4a1 1 0 1 1-1 1.7l-3-1.8A1 1 0 0 1 11 13V9a1 1 0 0 1 1-1zm0-6a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+              <span>Mon–Fri, 9:30am–6:30pm</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/brand-facebook.svg" alt="Facebook"></a>
+            <a href="#" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/brand-linkedin.svg" alt="LinkedIn"></a>
+            <a href="#" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/brand-instagram.svg" alt="Instagram"></a>
+          </div>
+          <div class="map-wrap" style="margin-top:1rem">
+            <h4>Map</h4>
+            <div class="map-frame">
+              <iframe title="Netzwerk office location"
+                width="100%" height="300" style="border:0"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Netzwerk,%20No:%20265,%20first%20floor,%206th%20main,%204th%20Cross%20Rd,%20Mico%20Layout,%20BTM%202nd%20Stage,%20Bengaluru,%20Karnataka%20560076&output=embed"></iframe>
+            </div>
+          </div>
+          <h4 style="margin-top:0.75rem">Request for Proposal</h4>
+          <p>For procurement or managed services RFPs, include your project scope, estimated user/device counts, required SLAs, and preferred vendors — we will respond with a tailored proposal.</p>
+          <h4 style="margin-top:0.5rem">Careers</h4>
+          <p>We're hiring IT engineers and service delivery specialists. Send CVs to <a href="mailto:careers@netzwerk.systems">careers@netzwerk.systems</a>.</p>
+        </div>
+        <form class="contact-form reveal reveal-up" id="contact-form" action="mailto:contact@netzwerk.systems" method="post" enctype="text/plain" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" placeholder="e.g. +91 98765 43210" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button class="btn" type="submit">Send Message</button>
+          <p class="form-note" id="form-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Go to home">
+          <img src="assets/images/Pasted image.png" alt="Netzwerk logo">
+        </a>
+        <p class="footer-tag">Empowering businesses with modern IT solutions</p>
+        <p class="footer-copy">© 2025 Netzwerk — All Rights Reserved.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Netzwerk</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html#solutions">Why Choose Us</a></li>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="contact.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
