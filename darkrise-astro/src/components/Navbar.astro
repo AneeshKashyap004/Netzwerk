@@ -1,0 +1,30 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+<header class="sticky top-0 z-50 border-b border-white/10 bg-bg/70 backdrop-blur">
+  <div class="container flex items-center justify-between h-14">
+    <a href="/" class="flex items-center gap-2">
+      <span class="h-7 w-7 bg-accent rounded-md"></span>
+      <span class="font-semibold">Netzwerk</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      {links.map(l => <a href={l.href} class="hover:text-white/90">{l.label}</a>)}
+    </nav>
+    <div class="flex items-center gap-2">
+      <button id="theme-toggle" class="px-2 py-1 rounded hover:bg-white/10" aria-label="Toggle theme">🌙</button>
+      <a href="/contact" class="btn">Get Quote</a>
+    </div>
+  </div>
+</header>
+<script>
+  const btn = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+  const set = (d)=>{ d?root.classList.add('dark'):root.classList.remove('dark'); localStorage.setItem('dark', d?'1':'0'); };
+  set(localStorage.getItem('dark')!=='0');
+  btn?.addEventListener('click', ()=> set(!root.classList.contains('dark')));
+</script>

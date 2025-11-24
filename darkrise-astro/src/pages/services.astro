@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Services — Netzwerk">
+  <section class="grid md:grid-cols-2 gap-8 items-center">
+    <div class="reveal">
+      <p class="text-accent font-semibold tracking-widest uppercase text-xs">Our Expertise</p>
+      <h1 class="heading mt-1">Strategic IT Services for Modern Enterprises</h1>
+      <p class="mt-3 text-white/70">We help businesses adopt modern, secure, and scalable IT solutions, combining infrastructure, software and consulting expertise to empower your digital growth.</p>
+      <a class="btn mt-4" href="/contact">Talk to an expert</a>
+    </div>
+    <div class="reveal">
+      <div class="card h-72">
+        <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?q=80&w=1200&auto=format&fit=crop" alt="Abstract technology illustration" class="w-full h-full object-cover rounded-lg"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="heading">Solutions We Deliver</h2>
+    <div class="grid md:grid-cols-3 gap-4 mt-4">
+      {[
+        {t:'IT Infrastructure Management', d:'On‑prem and hybrid infra with monitoring, backups and lifecycle support.'},
+        {t:'Cybersecurity Solutions', d:'Endpoint protection, vulnerability management, MFA and incident response.'},
+        {t:'Cloud Solutions', d:'Migrations, backups, DR, cloud‑native optimizations (AWS/Azure/GCP).'},
+        {t:'Network Design & Implementation', d:'Secure LAN/WAN, Wi‑Fi design, SD‑WAN and connectivity solutions.'},
+        {t:'Managed IT Services', d:'Proactive monitoring, patching, remote helpdesk and managed device services.'},
+        {t:'IT Consulting & Strategy', d:'Technology roadmaps, cost optimization, procurement advisory and planning.'},
+      ].map(s=> (
+        <div class="card reveal hover:translate-y-[-2px] transition">
+          <h3 class="font-semibold">{s.t}</h3>
+          <p class="text-white/70 mt-1">{s.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="heading">Support & SLAs</h2>
+    <p class="text-white/70 mt-2">Tiered SLAs: Business Hours, Extended Coverage and 24/7 Critical support with guaranteed response windows. Tailored SLA documents available for procurement processes.</p>
+  </section>
+</Base>

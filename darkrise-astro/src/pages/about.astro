@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="About — Netzwerk">
+  <section class="prose prose-invert max-w-none">
+    <h1>About Netzwerk</h1>
+    <p>Driven by service. Defined by trust. Delivering value since 2021.</p>
+  </section>
+
+  <section class="grid md:grid-cols-2 gap-6 mt-6">
+    <div class="card reveal">
+      <h3 class="font-semibold">Our Journey</h3>
+      <p class="text-white/70 mt-1">From a small team to a full‑service IT provider, we focus on client value and reliable execution across procurement, managed services and lifecycle strategies.</p>
+    </div>
+    <div class="card reveal">
+      <h3 class="font-semibold">Vision & Mission</h3>
+      <p class="text-white/70 mt-1">To be a global leader in IT sales and services while offering cost‑effective, customer‑first solutions.</p>
+    </div>
+  </section>
+
+  <section class="card reveal mt-6">
+    <h3 class="font-semibold">Certifications & Platforms</h3>
+    <p class="text-white/70 mt-1">We adhere to enterprise compliance practices and work with Microsoft, Google, AWS, Dell, HP, Lenovo and more — from hardware provisioning to cloud integration.</p>
+  </section>
+
+  <section class="mt-8">
+    <h2 class="heading">Our Team</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mt-3">
+      {[1,2,3,4].map(i=> (
+        <article class="card reveal">
+          <img src={`https://i.pravatar.cc/300?img=${i*8}`} alt="Team member portrait" class="w-full h-40 object-cover rounded-lg" />
+          <h4 class="mt-2 font-semibold">Team Member {i}</h4>
+          <p class="text-white/70">Role</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>

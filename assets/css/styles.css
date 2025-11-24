@@ -541,10 +541,10 @@ button:focus-visible,
 .t-card h5{margin:.4rem 0 0;color:var(--text);font-weight:600}
 
 /* Contact info cards & socials */
-.contact-cards{display:grid;grid-template-columns:1fr;gap:.6rem;margin:.5rem 0 1rem}
-.c-card{display:flex;gap:.6rem;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.6rem .75rem;box-shadow:0 8px 18px rgba(0,0,0,0.04)}
-.c-card img{width:20px;height:20px;opacity:.9}
-.c-card a, .c-card span{color:var(--text);text-decoration:none}
+.contact-cards{display:grid;grid-template-columns:1fr;gap:.75rem;margin:.5rem 0 1rem}
+.c-card{display:grid;grid-template-columns:24px 1fr;column-gap:.6rem;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.55rem .75rem;box-shadow:0 8px 18px rgba(0,0,0,0.04)}
+.c-card img,.c-card svg{width:18px;height:18px;opacity:.9}
+.c-card a, .c-card span{color:var(--text);text-decoration:none;line-height:1.4}
 .social-links{display:flex;gap:.6rem;align-items:center}
 .social-links a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 8%,var(--surface)),var(--surface));border:1px solid var(--border);box-shadow:0 6px 16px rgba(0,0,0,0.05)}
 .social-links img{width:18px;height:18px}

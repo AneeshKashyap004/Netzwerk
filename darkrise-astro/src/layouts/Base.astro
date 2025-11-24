@@ -1,0 +1,36 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+const { title = 'Netzwerk — IT Services', description = 'Modern IT services: infrastructure, cloud, security, networking and development.' } = Astro.props;
+---
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/tailwind.css" />
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-bg to-bg-800 text-text">
+    <Navbar />
+    <main class="container mt-8">
+      <slot />
+    </main>
+    <Footer />
+    <script type="module">
+      // Reveal observer
+      const IO = new IntersectionObserver((es)=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')), {threshold:0.15});
+      document.querySelectorAll('.reveal').forEach(el=>IO.observe(el));
+      // View transitions for internal links
+      if(document.startViewTransition){
+        document.querySelectorAll('a[href^="/"]').forEach(a=>{
+          a.addEventListener('click',(ev)=>{ if(ev.metaKey||ev.ctrlKey||a.target==='_blank') return; ev.preventDefault(); document.startViewTransition(()=>{ window.location.href=a.href; }); });
+        });
+      }
+    </script>
+  </body>
+</html>
