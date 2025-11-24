@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 const { title = 'Netzwerk — IT Services', description = 'Modern IT services: infrastructure, cloud, security, networking and development.' } = Astro.props;
 ---
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,9 +13,19 @@ const { title = 'Netzwerk — IT Services', description = 'Modern IT services: i
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (()=>{
+        try{
+          const stored = localStorage.getItem('dark');
+          const prefers = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const enable = stored !== '0' && (stored === '1' || prefers);
+          document.documentElement.classList.toggle('dark', enable);
+        }catch(e){ /* no-op */ }
+      })();
+    </script>
     <link rel="stylesheet" href="/src/styles/tailwind.css" />
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-bg to-bg-800 text-text">
+  <body class="min-h-screen bg-gradient-to-b from-bg to-bg-800 text-text transition-colors duration-300">
     <Navbar />
     <main class="container mt-8">
       <slot />
